@@ -588,7 +588,9 @@ body {
 
 .services__item:hover .services__item-text,
 .services__item:hover .services__item-link {
-  display: block;
+  opacity: 1;
+  height: auto;
+  overflow: visible;
 }
 
 .services__item:hover .services__item-img {
@@ -606,6 +608,11 @@ body {
   padding: 25px 20px 5px;
 }
 
+.services__item-inner {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
 .services__item-img {
   margin-bottom: 30px;
 }
@@ -617,13 +624,19 @@ body {
   color: #4A4A4A;
 }
 
+.services__item-text, .services__item-link {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
 .services__item-text {
-  display: none;
   margin-bottom: 17px;
 }
 
 .services__item-link {
-  display: none;
   letter-spacing: 2px;
   color: #2B4074;
   text-transform: uppercase;
@@ -760,7 +773,8 @@ body {
     margin: 0 -100px 0 -50px;
   }
   .services__head {
-    max-width: 350px;
+    min-width: 350px;
+    min-width: 350px;
     margin-right: 100px;
   }
   .services__title {
@@ -775,7 +789,7 @@ body {
     margin: 0;
   }
   .services__item {
-    width: 238px;
+    width: 230px;
     padding: 0 5px;
     height: 273px;
   }
