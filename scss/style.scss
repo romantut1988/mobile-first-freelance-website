@@ -634,7 +634,7 @@
 .project {
     background: linear-gradient(180deg, #2B4074 0%, rgba(43, 64, 116, 0) 100%);
     text-align: center;
-    padding: 20px 0 40px;
+    padding: 20px 0;
 
     &__title {
         color: #fff;
@@ -647,8 +647,12 @@
 
     &__item-img {
         min-height: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         border-radius: 4px;
         padding: 12px 14px;
+
         &:hover {
             .project__item-inner {
                 opacity: 1;
@@ -678,24 +682,103 @@
         line-height: 19px;
         letter-spacing: 2px;
         color: $accent;
-        @extend %robotocondensed-700;
+    }
+}
+
+@media (min-width: 640px) {
+    .project {
+        padding: 40px 0 20px;
+
+        &__item-img {
+            min-height: 460px;
+            border-radius: 4px;
+            padding: 21px 24px;
+        }
+
+        &__item-inner {
+            min-height: 417px;
+        }
+
+        &__item-link {
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .project {
+        padding: 80px 0 60px;
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item-img {
+            width: 317px;
+            min-height: 282px;
+            border-radius: 4px;
+            padding: 12px 14px;
+        }
+
+        &__item-inner {
+            min-height: 256px;
+        }
+
+        &__item-link {
+            padding: 30px 0;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .project {
+
+        &__items {
+            justify-content: center;
+        }
+
+        &__item-img {
+            margin: 0 12px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .project {
+
+        &__items {
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
+
+        &__item-img {
+            width: 300px;
+        }
+
     }
 }
 
 .team {
     padding: 20px 0 40px;
     text-align: center;
+
     &__images {
         width: 100%;
         margin-bottom: 40px;
     }
+
     &__title {
         color: $text-color;
         margin-bottom: 23px;
     }
+
     &__text {
         margin-bottom: 84px;
     }
+
     &__btn {
         border: none;
         background-color: $accent;
