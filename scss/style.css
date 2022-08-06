@@ -609,8 +609,8 @@ body {
 }
 
 .services__item-inner {
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .services__item-img {
