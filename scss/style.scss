@@ -681,3 +681,27 @@
         @extend %robotocondensed-700;
     }
 }
+
+.team {
+    padding: 20px 0 40px;
+    text-align: center;
+    &__images {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    &__title {
+        color: $text-color;
+        margin-bottom: 23px;
+    }
+    &__text {
+        margin-bottom: 84px;
+    }
+    &__btn {
+        border: none;
+        background-color: $accent;
+        text-transform: uppercase;
+        border-radius: 3px;
+        padding: 21px 26px;
+        color: $bg-color;
+    }
+}
